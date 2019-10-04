@@ -7,10 +7,11 @@
 
 int isprime(int ii);
 int sumprimes(int imin, int imax);
+//int amountofprimes(int imin, int imax);
 int main (void)
 {
-  std::printf("sumprimes(%d, %d) = %d\n",500,12400,sumprimes(500,12400));
-
+  //std::printf("sumprimes(%d, %d) = %d, amountofprimes(%d, %d) = %d\n",500,12400,sumprimes(500,12400),500,12400,amountofprimes(500,12400));
+std::printf("sumprimes(%d, %d) = %d\n",500,12400,sumprimes(500,12400));
 
   return 0;
 }
@@ -32,7 +33,7 @@ int isprime(int ii)
       p++;
       primos.resize(p,r);
     }
-
+    return primos.size();
 }
 
 int sumprimes(int imin, int imax)
@@ -44,3 +45,13 @@ int sumprimes(int imin, int imax)
     }
   return sum;
 }
+
+/*int amountofprimes(int imin, int imax)
+{
+  int sum = 0;
+  for(int x = imin; x<=imax; x++)
+    {
+      sum+=isprime(x);
+    }
+  return sum;
+}*/
